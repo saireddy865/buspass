@@ -1,167 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<center><h2>General Bus Pass Application</h2></center>
-<form action="./response.html" method="get">
-<fieldset>
-    <legend><h4>Applicant Details</h4> </legend>
-<table>
-    <tbody>
-    <tr>
-        <td>
-            <label for ="Name">Name:</label>
-            <input type="text" Name="Name" id="Name"  place holder="enter name"required>     
-        </td>
-        <br>
-        <td>
-            <label for ="Father's/Gaurdian Name">Father's/Gaurdian Name:</label> 
-            <input type="text" Name="Father's/Gaurdian Name" id="Father's/Gaurdian Name" required><br>
-        </td>
-        <br>
-    </tr>
-    <tr>
-        <td>
-            <label for="Date of Birth">date of birth:</label> 
-            <input type="date" Name="Date of Birth" value="date of birth" id="Date of birth" required>    
-       </td>
-       <td>
-        <label for ="Gender">Gender:</label>
-             <label for="male">male</label>
-             <input type="radio" id="male" value="gender" name="gender">
-             <label for="female">female</label>
-             <input type="radio" id="female" value="gender" name="gender"><br>
-       </td>
-        <br>
-    </tr>
-    <tr>
-    <td><label for="Age"> Age As on:</label>
-        <input type="number" id="age" name="Age As on" value="age">
-    </td>
-    <td>
-        <label for="Adhaar No">Adhaar No:</label>
-        <input type="text" id="Adhaar No" value="" name="Adhaar No"><br>
-        <tr>
-     <td>
-    <label for="Mobile No">Mobile No:</label>
-    <input type="text" id="Mobile No" value="" name="Mobile No">
-     </td>
-       <td> 
-          <label for="Email Id">Email Id:</label>
-          <input type="Email" id="Email Id" value="" name="Email Id"><br>
-      </td>
-        <tr>
-            <td>
-                <label for="photo">photo:</label>
-                <input type="file" id="Photo" value="choose File" name="photo">
-            </td>
-        </tr>
-    </td>
-    </tr>
-</tbody>
-</table>
-</fieldset>
-<fieldset>
-    <legend><h4>Residential Adress Details</h4></legend>
-    <tbody>
-        <tr>
-            <td>
-            <label for="Applicant Address">Applicant Address:</label>
-            <input type="text" id="Applicant Address" value="" name="Applicant Address" maximum characters="20">
-        </td>
-            <td>
-                <label for="District">District:</label>
-                <select type="district">
-                    <option value="krishna">krishna</option>
-                    <option value="guntur">guntur</option>
-                </select>
-            </td><br>
-        </tr>
-        <tr>
-            <td>
-                <label for="Mandal">Mandal:</label>
-                <select type="Mandal">
-                    <option  value="movva">Movva</option>  
-                    <option value="pamarru">pamarru</option>               
-                </select>
-            </td>
-            <td>
-                <label for="Village">Village:</label>
-                <select type="Village">
-                    <option value="kaza">Kaza</option>
-                    <option value="kosuru">kosuru</option>
-                </select>
-            </td><br>
-        </tr>
-        <tr>
-            <td>
-                <label for="Pincode">Pincode:</label>
-                <input type="Number" id="Pincode" name="number" value="">
-            </td>
-        </tr>
-    </tbody>
-</fieldset>
-<fieldset>
-    <legend><h4>Pass Type Details</h4></legend>
-    <tbody>
-        <tr>
-            <td>
-                <label for="city">city:</label>
-                <select type="City">
-                    <option value ="Machilipatnam">Machilipatnam</option>
-                    <option value="Gudivada">Gudivada</option>
-                </select>
-            </td><br>
-        </tr>
-        <tr>
-            <td>
-                <label for="Pass">Pass Type:</label>
-                <select type="Pass">
-                    <option value="monthly">monthly</option>
-                    <option value="Yearly">yearly</option>
-                </select>
-            </td><br>
-        </tr>
-    </tbody>
-</fieldset>
-<fieldset>
-    <legend><h4>Mode of Payment & Pass Collection</h4></legend>
-    <tbody>
-        <tr>
-            <td>
-                <label for="Payment Mode">Payment mode:</label>
-                <select type="payment mode">
-                    <option value="Cash">cash</option>
-                    <option value="upi">upi</option>
-                </select>
-            </td><br>
-        </tr>
-        <tr>
-            <td>
-                <label for="Delivery">Pass Delivery Mode</label>
-                <select type="Delivery mode">
-                    <option value="express">post</option>
-                    <option value="normal">normal</option>
-                </select>
-            </td><br>
-        </tr>
-        <tr>
-            <td>
-                <label for="collection">center at which you want to collect pass</label>
-                <select type =   "center">
-                    <option value="Bander">Bander</option>
-                    <option value="Guduru">Guduru</option>
-                </select>
-            </td><br>
-        </tr>
-    </tbody>
-</fieldset>
-<center><input type="submit" name="details" value="submit"></center>
-</form>
+    <center>
+        <h2>General Bus Pass Application</h2>
+    </center>
+    <form action="./response.html" method="get">
+        <fieldset>
+            <legend>
+                <h4>Applicant Details</h4>
+            </legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="Name">Name:</label>
+                            <input type="text" Name="Name" id="Name" pattern="[A-Za-z/s]{2,16}"
+                                title="length should be min 2 max 16" auto complete="off" place holder="enter name"
+                                required>
+                        </td>
+                        <br>
+                        <td>
+                            <label for="Father's/Gaurdian Name">Father's/Gaurdian Name:</label>
+                            <input type="text" Name="Father's/Gaurdian Name" id="Father's/Gaurdian Name"
+                                pattern="[A-Za-z/s]{2,16}" title="length should be min 2 max 16" auto complete="off"
+                                required><br>
+                        </td>
+                        <br>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Date of Birth">date of birth:</label>
+                            <input type="date" Name="Date of Birth" value="date of birth" id="Date of birth" required>
+                        </td>
+                        <td>
+                            <label for="Gender">Gender:</label>
+                            <label for="male">male</label>
+                            <input type="radio" id="male" value="gender" name="gender">
+                            <label for="female">female</label>
+                            <input type="radio" id="female" value="gender" name="gender"><br>
+                        </td>
+                        <br>
+                    </tr>
+                    <tr>
+                        <td><label for="Age"> Age As on:</label>
+                            <input type="number" id="age" name="Age As on" value="age">
+                        </td>
+                        <td>
+                            <label for="Adhaar No">Adhaar No:</label>
+                            <input type="text" id="Adhaar No" value="" name="Adhaar No"><br>
+                    <tr>
+                        <td>
+                            <label for="Mobile No">Mobile No:</label>
+                            <input type="text" id="Mobile No" value="" name="Mobile No">
+                        </td>
+                        <td>
+                            <label for="Email Id">Email Id:</label>
+                            <input type="Email" id="Email Id" value="" name="Email Id"><br>
+                        </td>
+                    <tr>
+                        <td>
+                            <label for="photo">photo:</label>
+                            <input type="file" id="Photo" accept=".pdf,.docx" value="choose File" name="photo">
+                        </td>
+                    </tr>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h4>Residential Adress Details</h4>
+            </legend>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="Applicant Address">Applicant Address:</label>
+                        <input type="text" id="Applicant Address" value="" name="Applicant Address" maximum
+                            characters="20">
+                    </td>
+                    <td>
+                        <label for="District">District:</label>
+                        <select type="district">
+                            <option value="krishna">krishna</option>
+                            <option value="guntur">guntur</option>
+                        </select>
+                    </td><br>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Mandal">Mandal:</label>
+                        <select type="Mandal">
+                            <option value="movva">Movva</option>
+                            <option value="pamarru">pamarru</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="Village">Village:</label>
+                        <select type="Village">
+                            <option value="kaza">Kaza</option>
+                            <option value="kosuru">kosuru</option>
+                        </select>
+                    </td><br>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Pincode">Pincode:</label>
+                        <input type="Number" id="Pincode" name="number" value="">
+                    </td>
+                </tr>
+            </tbody>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h4>Pass Type Details</h4>
+            </legend>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="city">city:</label>
+                        <select type="City">
+                            <option value="Machilipatnam">Machilipatnam</option>
+                            <option value="Gudivada">Gudivada</option>
+                        </select>
+                    </td><br>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Pass">Pass Type:</label>
+                        <select type="Pass">
+                            <option value="monthly">monthly</option>
+                            <option value="Yearly">yearly</option>
+                        </select>
+                    </td><br>
+                </tr>
+            </tbody>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h4>Mode of Payment & Pass Collection</h4>
+            </legend>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="Payment Mode">Payment mode:</label>
+                        <select type="payment mode">
+                            <option value="Cash">cash</option>
+                            <option value="upi">upi</option>
+                        </select>
+                    </td><br>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Delivery">Pass Delivery Mode</label>
+                        <select type="Delivery mode">
+                            <option value="express">post</option>
+                            <option value="normal">normal</option>
+                        </select>
+                    </td><br>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="collection">center at which you want to collect pass</label>
+                        <select type="center">
+                            <option value="Bander">Bander</option>
+                            <option value="Guduru">Guduru</option>
+                        </select>
+                    </td><br>
+                </tr>
+            </tbody>
+        </fieldset>
+        <center><input type="submit" name="details" value="submit"></center>
+    </form>
 
 </body>
+
 </html>
